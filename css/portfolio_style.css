@@ -1,0 +1,211 @@
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background: #222;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Section Hero */
+.hero {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: linear-gradient(to right, #00c896, #007bff);
+    color: white;
+}
+
+//* Section À Propos */
+.about {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+/* Conteneur pour la photo de profil et le texte */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;  /* Espacement entre la photo et le texte */
+    flex-direction: column;  /* Pour les petits écrans, aligner les éléments verticalement */
+}
+
+.profile-picture img {
+    width: 150px; /* Taille de l'image */
+    height: 150px; /* Taille de l'image */
+    border-radius: 50%; /* Pour rendre l'image circulaire */
+    object-fit: cover; /* Assure-toi que l'image couvre bien le cercle */
+    border: 4px solid #00c896; /* Bordure autour de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre portée */
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+
+
+/* Section Compétences */
+.skills {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Projets */
+.projects {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Contact */
+.contact {
+    display: flex;
+    justify-content: center;  /* Centrer horizontalement */
+    align-items: center;  /* Centrer verticalement */
+    flex-direction: column;  /* Aligner les éléments les uns sous les autres */
+    min-height: 60vh;  /* Hauteur minimum de la section */
+    padding: 6rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;  /* Un fond clair */
+}
+
+/* Formulaire de contact */
+.contact form {
+    max-width: 500px;  /* Largeur maximum du formulaire */
+    width: 100%;  /* Pour s'adapter aux petits écrans */
+    display: flex;
+    flex-direction: column;  /* Les éléments du formulaire seront empilés */
+    gap: 1.2rem;  /* Espacement entre les éléments */
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact button {
+    padding: 12px;
+    background: #00c896;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background: #007bff;
+}
+
+/* Message de confirmation après envoi du formulaire */
+#formMessage {
+    margin-top: 20px;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+/* Texte caché (message après envoi) */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: white;
+}
+
+/* Responsivité */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+    }
+}
